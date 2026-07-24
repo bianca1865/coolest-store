@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>COOLEST Brands — Established 2017</title>
+  <meta name="description" content="COOLEST Brands. Minimalist streetwear from Botswana. Tees, hoodies and accessories in black, white and grey. Established 2017."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="hero">
+      <div class="slide active" style="background-image:url('assets/hero.jpg')"></div>
+      <div class="slide" style="background-image:linear-gradient(135deg,#1a1a1a,#3a3a3a)"></div>
+      <div class="slide" style="background-image:linear-gradient(135deg,#2a2a2a,#555)"></div>
+      <div class="hero-overlay">
+        <div class="label">Coolest Collection · Est. 2017</div>
+        <h1 class="display">Refuse to<br/>Blend In.</h1>
+        <a href="shop.html" class="hero-cta">Shop the Collection</a>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="uppercase-label" style="margin-bottom:10px">Shop by Category</div>
+            <h2 class="display">The Range</h2>
+          </div>
+          <a href="shop.html" class="link-underline">View All</a>
+        </div>
+        <div class="cat-grid" data-categories></div>
+      </div>
+    </section>
+
+    <section class="block" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="uppercase-label" style="margin-bottom:10px">The First Set</div>
+            <h2 class="display">Latest Arrivals</h2>
+          </div>
+          <a href="shop.html" class="link-underline">View All</a>
+        </div>
+        <div class="product-grid" data-featured></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="uppercase-label" style="margin-bottom:20px">Est. 2017</div>
+      <h2 class="display">Built for those who<br/>refuse to blend in.</h2>
+      <p>COOLEST Brands began in 2017 as a rejection of noise. A commitment to garments that earn their place — clean lines, considered weight, and a palette that never dates. Every piece is designed in Botswana and made to outlast the season.</p>
+    </section>
+
+    <section class="newsletter">
+      <h3 class="display">Join the Circle</h3>
+      <p>Early access to drops, private events, and studio dispatches. No fluff.</p>
+      <form onsubmit="event.preventDefault();this.reset();alert('Subscribed');">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <div data-footer></div>
+  <script src="app.js"></script>
+</body>
+</html>

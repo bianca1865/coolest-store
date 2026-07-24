@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Checkout — COOLEST Brands</title>
+  <meta name="description" content="Complete your COOLEST Brands order."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div data-header></div>
+  <main class="page">
+    <div class="container">
+      <div class="uppercase-label" style="margin-bottom:10px">Secure Checkout</div>
+      <h1 class="display">Checkout</h1>
+
+      <div class="checkout-grid" style="margin-top:24px">
+        <form class="form-panel" data-checkout-form>
+          <h2 class="display">Contact</h2>
+          <div class="field"><label>Email</label><input type="email" required/></div>
+          <div class="field"><label>Full Name</label><input required/></div>
+
+          <h2 class="display" style="margin-top:20px">Shipping Address</h2>
+          <div class="field"><label>Address</label><input required/></div>
+          <div class="field-row">
+            <div class="field"><label>City</label><input required/></div>
+            <div class="field"><label>Postal Code</label><input required/></div>
+          </div>
+          <div class="field"><label>Country</label>
+            <select required>
+              <option>Botswana</option><option>South Africa</option><option>Namibia</option>
+              <option>Zambia</option><option>Kenya</option><option>Nigeria</option>
+              <option>United States</option><option>United Kingdom</option>
+            </select>
+          </div>
+
+          <h2 class="display" style="margin-top:20px">Payment</h2>
+          <div class="field"><label>Card Number</label><input placeholder="1234 5678 9012 3456" required/></div>
+          <div class="field-row">
+            <div class="field"><label>Expiry</label><input placeholder="MM/YY" required/></div>
+            <div class="field"><label>CVC</label><input placeholder="123" required/></div>
+          </div>
+          <div class="payment-icons">
+            <img src="https://cdn.simpleicons.org/visa/1a1f71" alt="Visa"/>
+            <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard"/>
+            <img src="https://cdn.simpleicons.org/americanexpress/006fcf" alt="Amex"/>
+            <img src="https://cdn.simpleicons.org/paypal/003087" alt="PayPal"/>
+            <img src="https://cdn.simpleicons.org/applepay/000" alt="Apple Pay"/>
+            <img src="https://cdn.simpleicons.org/googlepay/4285F4" alt="Google Pay"/>
+          </div>
+
+          <button type="submit" class="btn-primary">Place Order</button>
+        </form>
+
+        <aside class="summary-panel">
+          <h2 class="display">Order Summary</h2>
+          <div data-checkout-summary></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <div data-footer></div>
+  <script src="app.js"></script>
+</body>
+</html>

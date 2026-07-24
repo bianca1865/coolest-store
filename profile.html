@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Profile — COOLEST Brands</title>
+  <meta name="description" content="Your COOLEST Brands account details."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div data-header></div>
+  <main class="page">
+    <div class="container">
+      <div class="uppercase-label" style="margin-bottom:10px">Account</div>
+      <h1 class="display">Your Profile</h1>
+
+      <div class="profile-grid" style="margin-top:24px">
+        <div class="profile-card">
+          <div class="avatar">C</div>
+          <div style="text-align:center">
+            <div style="font-size:15px;text-transform:uppercase;letter-spacing:.15em">Guest User</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px;word-break:break-all">guest@coolestbrands.co.bw</div>
+          </div>
+          <div style="margin-top:22px;display:flex;flex-direction:column;gap:8px">
+            <a href="cart.html" class="chip" style="text-align:center">View Cart</a>
+            <a href="shop.html" class="chip" style="text-align:center">Continue Shopping</a>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <h2 class="display">Personal Details</h2>
+          <div class="field-row" style="margin-top:14px">
+            <div class="field"><label>First Name</label><input value="Guest"/></div>
+            <div class="field"><label>Last Name</label><input value="User"/></div>
+          </div>
+          <div class="field"><label>Email</label><input value="guest@coolestbrands.co.bw"/></div>
+          <div class="field"><label>Phone</label><input placeholder="+267"/></div>
+
+          <h2 class="display" style="margin-top:28px">Default Address</h2>
+          <div class="field"><label>Street</label><input placeholder="123 Main Rd"/></div>
+          <div class="field-row">
+            <div class="field"><label>City</label><input placeholder="Gaborone"/></div>
+            <div class="field"><label>Country</label><input value="Botswana"/></div>
+          </div>
+
+          <h2 class="display" style="margin-top:28px">Order History</h2>
+          <div style="color:var(--muted);font-size:14px;padding:14px 0">No orders yet.</div>
+
+          <button type="button" class="btn-primary" onclick="alert('Profile saved')">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div data-footer></div>
+  <script src="app.js"></script>
+</body>
+</html>
