@@ -104,7 +104,7 @@ function renderHeader(){
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand" aria-label="COOLEST Brands home">
-        <img src="assets/logo.png" alt="COOLEST Brands"/>
+        <img src="logo.png" alt="COOLEST Brands"/>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
@@ -153,7 +153,7 @@ function renderFooter(){
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="COOLEST Brands"/>
+        <img src="logo.png" alt="COOLEST Brands"/>
         <p>Minimalist streetwear from Botswana. Considered garments in black, white and grey. Established 2017.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
