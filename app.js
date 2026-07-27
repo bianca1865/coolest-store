@@ -452,6 +452,12 @@ function renderCheckoutSummary(){
 
 // ============ BOOT ============
 document.addEventListener("DOMContentLoaded", ()=>{
+  const isHomePage = /(^|\/)index\.html$/.test(location.pathname) || location.pathname.endsWith("/");
+  if (isHomePage && localStorage.getItem("coolest-signed-in") !== "true"){
+    location.href = "login.html";
+    return;
+  }
+
   mountShell();
   initHero();
 
