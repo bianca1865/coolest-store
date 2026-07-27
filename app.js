@@ -39,6 +39,29 @@ const PRODUCTS = [
   { id:"coolest-tote",       name:"Coolest Canvas Tote",            category:"accessories", price:260 },
 ];
 
+// Preview imagery: supplied portrait photos are intentionally reused across products.
+const PRODUCT_IMAGES = {
+  "coolest-tee-black": "assets/coolest-dj.jpeg",
+  "coolest-tee-white": "assets/coolest-model.jpeg",
+  "coolest-tee-grey": "assets/coolest-dj.jpeg",
+  "coolest-oversized": "assets/coolest-model.jpeg",
+  "coolest-boxy-tee": "assets/coolest-dj.jpeg",
+  "coolest-hoodie-blk": "assets/coolest-hoodieblack.jpeg",
+  "coolest-hoodie-gry": "assets/coolest-model.jpeg",
+  "coolest-zip-hoodie": "assets/coolest-hoodieblack.jpeg",
+  "coolest-cap-black": "assets/coolest-1cap.jpeg",
+  "coolest-cap-white": "assets/coolest-1cap.jpeg",
+  "coolest-trucker": "assets/coolest-1cap.jpeg",
+  "coolest-tote": "assets/coolest-hoodieblack.jpeg",
+};
+
+const CATEGORY_IMAGES = {
+  tees: "assets/coolest-dj.jpeg",
+  hoodies: "assets/coolest-hoodieblack.jpeg",
+  caps: "assets/coolest-1cap.jpeg",
+  accessories: "assets/coolest-model.jpeg",
+};
+
 // ============ STATE ============
 const flagUrl = (code) => `https://flagcdn.com/w40/${code}.png`;
 
@@ -104,7 +127,7 @@ function renderHeader(){
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand" aria-label="COOLEST Brands home">
-        <img src="logo.png" alt="COOLEST Brands"/>
+        <img src="assets/logo.png" alt="COOLEST Brands"/>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
@@ -153,7 +176,7 @@ function renderFooter(){
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="logo.png" alt="COOLEST Brands"/>
+        <img src="assets/logo.png" alt="COOLEST Brands"/>
         <p>Minimalist streetwear from Botswana. Considered garments in black, white and grey. Established 2017.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
@@ -219,13 +242,20 @@ function mountShell(){
 }
 
 // ============ PRODUCT CARD + MODAL ============
-function productPlaceholder(){
-  return `<div class="placeholder">COOLEST</div>`;
+function productImage(p){
+  const image = PRODUCT_IMAGES[p.id];
+  return image
+    ? `<img src="${image}" alt="${p.name}"/>`
+    : `<div class="placeholder">COOLEST</div>`;
+}
+function cartProductImage(item){
+  const image = PRODUCT_IMAGES[item.productId];
+  return image ? `<img src="${image}" alt="${item.name}"/>` : `<div class="placeholder"></div>`;
 }
 function productCard(p){
   return `
     <div class="product-card" data-product="${p.id}" role="button" tabindex="0">
-      <div class="product-media">${productPlaceholder()}</div>
+      <div class="product-media">${productImage(p)}</div>
       <div class="product-info">
         <div class="name">${p.name}</div>
         <div class="price">${formatPrice(p.price)}</div>
@@ -260,7 +290,7 @@ function openModal(productId){
   backdrop.innerHTML = `
     <div class="modal" role="dialog" aria-modal="true">
       <button type="button" class="modal-close" aria-label="Close">✕</button>
-      <div class="modal-media">${productPlaceholder()}</div>
+      <div class="modal-media">${productImage(p)}</div>
       <div class="modal-body">
         <div class="collection">Coolest Collection</div>
         <h3>${p.name}</h3>
@@ -369,7 +399,7 @@ function renderCartPage(){
     <div class="cart-list">
       ${cart.map((i,idx)=>`
         <div class="cart-row">
-          <div class="thumb"><div class="placeholder"></div></div>
+          <div class="thumb">${cartProductImage(i)}</div>
           <div class="info">
             <div class="title">${i.name}</div>
             <div class="meta">${[i.color,i.size,i.gender].filter(Boolean).join(" · ")}</div>
@@ -436,6 +466,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   if (catGrid){
     catGrid.innerHTML = CATEGORIES.map(c=>`
       <a href="shop.html?category=${c.slug}" class="cat-card">
+        <img src="${CATEGORY_IMAGES[c.slug]}" alt="${c.label}"/>
         <h3>${c.label}</h3>
         <span class="go">Shop ${c.label}</span>
       </a>`).join("");
