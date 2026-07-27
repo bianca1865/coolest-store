@@ -142,7 +142,7 @@ function renderHeader(){
           </button>
           <div class="currency-menu" id="curr-menu" role="menu">${currencyMenu}</div>
         </div>
-        <a href="profile.html" class="icon-btn" aria-label="Profile">
+        <a href="login.html" class="icon-btn" aria-label="Sign in">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
         </a>
         <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
@@ -165,7 +165,7 @@ function renderHeader(){
       <a href="shop.html?category=hoodies">Hoodies</a>
       <a href="shop.html?category=caps">Caps</a>
       <a href="shop.html?category=accessories">Accessories</a>
-      <a href="profile.html">Profile</a>
+      <a href="login.html">Sign In</a>
       <a href="cart.html">Cart</a>
     </div>
   </div>`;
@@ -194,7 +194,7 @@ function renderFooter(){
       </div>
       <div class="footer-col">
         <h4>Account</h4>
-        <a href="profile.html">Profile</a>
+        <a href="login.html">Sign In</a>
         <a href="cart.html">Cart</a>
         <a href="checkout.html">Checkout</a>
       </div>
@@ -492,4 +492,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   renderCartPage();
   renderCheckoutSummary();
+
+  const loginForm = document.querySelector("[data-login-form]");
+  if (loginForm){
+    loginForm.addEventListener("submit", (e)=>{
+      e.preventDefault();
+      localStorage.setItem("coolest-signed-in", "true");
+      toast("Signed in successfully");
+      setTimeout(()=>{ location.href = "profile.html"; }, 650);
+    });
+  }
 });
