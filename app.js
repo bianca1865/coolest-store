@@ -179,10 +179,9 @@ function renderFooter(){
         <img src="logo.png" alt="COOLEST Brands"/>
         <p>Minimalist streetwear from Botswana. Considered garments in black, white and grey. Established 2017.</p>
         <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2-2h2V2h-3c-3 0-4 2-4 4.5V10H7v4h3v8h3z"/></svg></a>
-          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3v3.3A5 5 0 0 0 20 8v3a8 8 0 0 1-4-1.2V15a6 6 0 1 1-6-6v3.2A2.8 2.8 0 1 0 13 15V3h3z"/></svg></a>
-          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 3h3l-7 8 8 10h-6l-5-6-6 6H2l7-9L1 3h6l4 5 7-5z"/></svg></a>
+          <a href="https://www.instagram.com/coolestbrands_?igsh=Mmp4OHBmYXY0ZnVo" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/share/1BRWDVGTCV/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2-2h2V2h-3c-3 0-4 2-4 4.5V10H7v4h3v8h3z"/></svg></a>
+          <a href="https://www.tiktok.com/@coolestbrands" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3v3.3A5 5 0 0 0 20 8v3a8 8 0 0 1-4-1.2V15a6 6 0 1 1-6-6v3.2A2.8 2.8 0 1 0 13 15V3h3z"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
