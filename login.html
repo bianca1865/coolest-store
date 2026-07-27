@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sign In — COOLEST Brands</title>
+  <meta name="description" content="Sign in to your COOLEST Brands account."/>
+  <link rel="icon" href="assets/logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div data-header></div>
+  <main class="login-page">
+    <section class="login-visual" aria-hidden="true">
+      <img src="assets/coolest-model.jpeg" alt=""/>
+      <div class="login-visual-copy">
+        <span>COOLEST Brands</span>
+        <strong class="display">REFUSE TO<br/>BLEND IN.</strong>
+      </div>
+    </section>
+    <section class="login-panel">
+      <div class="login-form-wrap">
+        <div class="uppercase-label">Account</div>
+        <h1 class="display">Welcome Back</h1>
+        <p>Sign in to manage your profile, save your details, and follow your orders.</p>
+        <form data-login-form>
+          <div class="field">
+            <label for="login-email">Email Address</label>
+            <input id="login-email" type="email" placeholder="you@example.com" autocomplete="email" required/>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" type="password" placeholder="Enter your password" autocomplete="current-password" required/>
+          </div>
+          <div class="login-options">
+            <label class="remember"><input type="checkbox"/> Remember me</label>
+            <a href="#" class="link-underline">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-primary">Sign In</button>
+        </form>
+        <p class="login-register">New to COOLEST? <a href="#" class="link-underline">Create an account</a></p>
+      </div>
+    </section>
+  </main>
+  <div data-footer></div>
+  <script src="app.js"></script>
+</body>
+</html>
